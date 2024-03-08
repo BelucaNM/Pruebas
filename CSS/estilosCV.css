@@ -1,4 +1,4 @@
-.divTodo {
+#divTodo {
   margin: auto;
   border: 3px solid #73AD21;
   padding: 10px;
@@ -13,6 +13,10 @@
 }
 #divPersonal {
   width:33%;
+  background-color:#FFC0C7;
+  float:left;
+}
+#divCV {
   background-color:#FFC0C7;
   float:left;
 }
