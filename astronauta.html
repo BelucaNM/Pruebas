@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astronauta en el espacio</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .astronaut-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .astronaut {
+    width: 100px;
+    height: 150px;
+    background-image: url('astronauta.png'); /* Reemplaza 'astronaut.png' con la ruta a tu imagen de astronauta */
+    background-size: cover;
+    animation: float 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) translateY(-10%);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(10%);
+    }
+  }
+
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 2s infinite;
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="astronaut-container">
+  <div class="astronaut"></div>
+</div>
+
+<div class="stars">
+  <!-- Stars will be generated dynamically using JavaScript -->
+</div>
+
+<script>
+  // Dynamically generate stars
+  const starsContainer = document.querySelector('.stars');
+  for (let i = 0; i < 100; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.left = Math.random() * 100 + '%';
+    starsContainer.appendChild(star);
+  }
+</script>
+
+</body>
+</html>

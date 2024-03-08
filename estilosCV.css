@@ -1,0 +1,18 @@
+.divTodo {
+  margin: auto;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  width:100%;
+  background-color:#ece7ec;
+  overflow:auto;
+}
+#divCV {
+  width:33%;
+  background-color:#FFC0C7;
+  float:right;
+}
+#divPersonal {
+  width:33%;
+  background-color:#FFC0C7;
+  float:left;
+}
