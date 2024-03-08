@@ -1,6 +1,6 @@
 #divTodo {
   margin: auto;
-  border: 3px solid #73AD21;
+  border: 3px solid #6e70e6;
   padding: 10px;
   width:100%;
   background-color:#ece7ec;
@@ -8,15 +8,31 @@
 }
 #divCV {
   width:33%;
-  background-color:#FFC0C7;
+  background-color:#f5c7cc;
+  background: linear-gradient(-90deg,rgb(231, 185, 231),white);
   float:right;
+  border-color: #e747da;
+  border-width: 4px;
+  border-style: double;
+  margin: auto;
+  padding: 20px;
+  float:left;
+  height: 700px;
 }
 #divPersonal {
   width:33%;
-  background-color:#FFC0C7;
+  margin: auto;
+  background-color:#9fc5df;
+  background: linear-gradient(90deg,rgb(191, 233, 243),white);
   float:left;
+  border-color: #4231da;
+  border-width: 4px;
+  border-style: double;
+  padding: 20px;
+  height: 700px;
 }
-#divCV {
-  background-color:#FFC0C7;
-  float:left;
+
+.remarcable{
+  color:#4231da;
+  font-style: italic; 
 }
