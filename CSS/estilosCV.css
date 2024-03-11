@@ -36,3 +36,8 @@
   color:#4231da;
   font-style: italic; 
 }
+
+a:link {color:#cc0000; }
+a:visited {color:#ccc;}
+a:hover {color:#FFF; background-color: #cc0000;}
+/* a:active{} */
