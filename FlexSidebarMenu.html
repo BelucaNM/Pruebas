@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio numero 1 de uso del flexbox</title>
+  <style>
+
+  /* Ojo----hay que usar una clase. div no funciona*/
+  .soyFlex{display:flex;
+            width:500px;
+            height:300px; 
+            font-family: sans-serif;
+            justify-content: space-between;
+            align-items: stretch;
+            gap:2px ;
+          } 
+    .item {border: 2px red solid;padding-right: 12px; padding-top:24px; flex-basis: 200px;}
+    .item:nth-child(1) {background-color:rgb(146, 233, 246) ;flex: 1; }  
+    .item:nth-child(2) {background-color: rgba(193,219,210,1.00); flex:2; }  
+#menu { list-style-type:none;}
+
+.menu{ display:flex; flex-direction: column; gap: 2px;}
+ul{ list-style-type: none;}
+li {border-bottom: 2px red solid; margin-bottom: 10px; }
+
+  </style>
+</head>
+<body>
+  <div class="soyFlex">
+    <div class="item" id="lateral" >
+        <ul class="menu" >
+            <li>Home</li>
+            <li>Servicios</li>
+            <li>Opciones</li>
+            <li>Planes</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+    <div class="item" id="principal">Este seria el contenido principal</div>
+  <div>
+</body>
+</html>
