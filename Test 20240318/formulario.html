@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" />
+        <title>Ejercicio de Menu vertical avanzado</title>
+        <Style src="text\css">
+            span {color:red;}
+            .grupo {font-weight: bold ;}
+           
+            form{width: 800px;height: 500px; padding: 1em;border: 2px white solid;}
+            /* #derecho{width: 420px; height: 300px;  padding: 1em;border: 2px white solid; float:right;} */
+            #derecho{width: 420px; height: 300px;  padding: 1em;border: 2px white solid;}
+            #nombre{padding: 1em;}
+            #contacto1{padding: 1em;}
+
+            /*#izquierdo{width: 300px; height: 300px; padding: 1em;border: 2px white solid;float:left; } */
+            #izquierdo{width: 300px;  padding: 1em;border: 2px white solid; }
+            #direccion{padding: 1em;}
+            #codigomunicipio{width: 400px; height: 3em;}
+            #codigo{display:inline;float:inline-start;}
+            #municipio{float:inline-end;}
+            #provinciapais{width: 400px; height: 3em;border: 2px white solid;}
+            #provincia{display:inline;width: 177px; height: 39px; float:inline-start;}
+            #pais{display:inline;width: 177px;height: 39px;}
+
+            #contacto{ width: 766px; height: 100px; padding: 1em;border: 2px white solid; float:left;}
+            /*#contacto1{ width: 200px; height: 5em;padding: 1em;float:left;}*/
+            #contacto1{ width: 200px; height: 5em;padding: 1em;}
+            #email{display:inline; width: 200px; }
+            /*#contacto2{ width: 400px; height: 5em;padding: 1em;float:right;}*/
+            #contacto2{ width: 400px; height: 5em;padding: 1em;}
+            #telefonos{width: 400px; height: 3em;}
+            #fijo{float:inline-start;}
+            #movil{float:inline-end;}
+            
+            #alta{width: 766px; height: 200px;padding: 1em; border-top:2px grey solid; float: inline-start;} 
+            input{border-top:2px grey solid; border-left:2px grey solid;border-bottom:2px rgb(237, 236, 236) solid; border-right:2px rgb(237, 236, 236) solid;}
+            #submitAlta{float: right;padding: 1em; }
+            
+          
+           
+                                
+            .resalte:hover {background-color: #FF9;}
+            input:active {border:2px solid #E6B700;}
+            input:hover {border:2px solid #E6B700;}
+            #explicacion {visibility: hidden;}
+            #direccion:hover #explicacion{visibility: visible;}
+        </Style>
+    </head>
+
+    <body>
+    <h1> Formulario de alta</h1>
+    <form id="fcontacte" action="#">
+        
+        <div id="izquierdo" >
+            <div id="nombre" class="resalte" >
+                <p class="grupo"> Nombre y Apellidos <span>*</span> </p>
+                <div id="pila">
+                    <input type="text" id="fname" name="fname" required > <br>
+                    <label for="fname">Nombre</label> <br>
+                </div>
+                <div id="papellido">
+                    <input type="text" id="fapellidoP" name="fapellidoP" required><br>
+                    <label for="fapellidoP"> Primer Apellido  </label><br>
+                </div>
+                <div id="sapellido">
+                    <input type="text" id="fapellidoS" name="fapellidoS" required><br>
+                    <label for="fapellidoS"> Segundo Apellido </label><br>
+                </div>
+            </div>
+            
+        </div>       
+
+        <div id="derecho"> 
+            <div id="direccion" class="resalte">
+                <p class="grupo"> Dirección <span>*</span> </p>
+                <div id="calle">
+                    <input type="text" id="fcalle" name="fcalle" required><br>
+                    <label for="fcalle">Calle, número, piso, puerta</label>
+                </div>
+                <p id="explicacion"> El código postal es imprescindible para poder recibir los pedidos  </p>
+                <div id="codigomunicipio">
+                    <div id="codigo">
+                        <input type="text" id="fCode" name="fCode" required><br>
+                        <label for="fCode"> Codigo Postal  </label> 
+                    </div>
+                    <div id="municipio">
+                        <input type="text" id="fmunicipio" name="fmunicipio" required><br>
+                        <label for="fmunicipio"> Municipio </label> <br>
+                    </div>
+                </div>
+                <div id=" provinciapais">
+                    <div id="provincia">
+                        <select name="fprovincia" id="fprovincia">
+                                <option value="barcelona">Barcelona</option>
+                                <option value="Tarragona">Tarragona</option>
+                                <option value="LLeida">LLeide</option>
+                                <option value="Girona">Girona</option>
+                        </select> <br>
+                        <label for="fprovincia"> Provincia </label>
+                    </div>
+                    <div id="pais">
+                        <select name="fpais" id="fpais">
+                            <option value="España">España</option>
+                            <option value="Espanya">Espanya</option>
+                        </select> <br>
+                        <label for="fpais"> Pais</label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+       
+        <div id="contacto1" class="resalte" >
+                <p class="grupo"> Email <span>*</span> </p>
+                <input type="email" id="femail" name="femail">
+        </div>            
+        <div id="contacto2" class="resalte">
+                <p class="grupo">Teléfono<span>*</span></p>
+                <div id="telefonos">
+                    <div id="fijo">   
+                        <input type="tel" id="ftelfijo" name="ftelfijo"><br>
+                        <label for="ftelfijo">Fijo </label>
+                    </div>
+                    <div id="movil">
+                        <input type="tel" id="ftelmovil" name="ftelmovil"><br>
+                        <label  for="ftelmovil">Móvil </label>
+                    </div>
+                </div>
+        </div>
+        <div id="alta">
+                <button id="submitAlta" type ="submit" formaction="" formtarget="_blank" > Darme de alta </button>
+        </div>
+        
+        
+    </form>
+    </body>
+
+    
+
+</HTML>
+
