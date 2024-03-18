@@ -2,59 +2,82 @@
 <html>
 <head>
   <meta charset="utf-8" >
-  <meta description="Ejercicio de prueba en Aula">
+  <meta description="Ejercicio de prueba en Aula con Menu y Expositores Flex">
   <link rel="shortcut icon" href="./imagenes/faviconTest.png">
   <title>El nostres productes de proximitat</title>
   <style>
 
   /* Ojo----hay que usar una clase. div no funciona*/
-  .capitulo{display:flex;
-            width:300px;
-            height:300px; 
-            background-color: rgba(193,219,210,1.00);
+  .expositores{display:flex;
+            width:1080px;
+            height: 725px; 
             font-family: sans-serif;
-            justify-content: center;
-            align-items: center;
-          }
-    /*div*/
+            justify-content: space-between;
+            align-items: stretch;
+            gap:2px ;}
+            
+    .tablaProductos {display:flex;}
+    .tablaProductos {border: 2px red solid;padding : 16px; flex-basis: 200px;}
+    .tablaProductos:nth-child(1) {flex:1; }  
+    .tablaProductos:nth-child(2) {flex:1; }  
+    .tablaProductos:nth-child(3) {flex:1; }
+
+    /*div
           div {margin: 20px;}
-          #divFrutas  {float: left; width: 33%; }
-          #divVerduras  {width: 33%; }
-          #divPescados  {float: right; width: 33%; }
-          div.tablaProductos {width:340px; height: 725px; }
-          .expositores {display: flex;}
-          .tablaProductos {display:flex;}
+          #divFrutas  {float: left; }
+          #divVerduras  {float:left; width: 25%; }
+          #divPescados  {float: left; width: 25%; }
+          #frutas,#divVerduras,#divPescados {width:340px; height: 725px; }
+          }*/
          
 
-    /*lista*/
-          ul {list-style-type: none; text-align: left; text-decoration: none;}
-          a:hover {background-color: grey;}
-       
-          
-          
+    /*lista Menu
+          ul {list-style-type: none; text-align: left; text-decoration: none;}*/
 
+          ul{
+            display:flex;
+            justify-content: space-between;
+            width: max-content;
+            gap: 2px;
+            padding:0;
+            list-style: none;
+        }  
+        ul li{
+            background: rgba(123,198,199,0.8);
+            flex-grow: 1;
+        }
+        ul a, ul a:link{
+            font-family:sans-serif;
+            font-size: x-large;
+            text-decoration:none;
+            color: black;
+            padding: 8px;
+            display:block;
+            width:100%;
+        }
+        a:hover {background-color: grey;}       
     /* Tablas*/
 
-        table {padding : 20px; border: 2px solid red; font-family:sans-serif;}
         table, td {border-collapse: collapse;}
-        th, .cambio {background-color: #E6F3FF;}
         .pares {background-color: #FFFFCC;}
         tr:hover {background-color: grey;}
 
         #frutas   { border: 2px solid green; background-color: rgb(216, 226, 197);}
         #verduras { border: 2px solid green; background-color: rgb(216, 226, 197);}
         #pescados { border: 2px solid blue; background-color: rgb(193, 243, 243);}
+
   </style>
 </head>
 <body>
-  <div >
+<div class="menu">
     <h1>“La botiga que t’ofereix productes de proximitat"</h1>
     <ul>
         <li><a href="#frutas"> Frutas </a></li>
         <li><a href="#verduras"> Verduras</a></li>
         <li><a href="#pescados"> Peix </a></li>
     </ul>
-</div class="expositores">
+</div>
+<div class="expositores">
 <div id="divFrutas" classe="tablaProductos">
     <table id="frutas">
         <tr>
@@ -144,7 +167,8 @@
         </tr>
       
     </table>
-  <div>
+  
+</div>
 </div>
 </body>
 </html>

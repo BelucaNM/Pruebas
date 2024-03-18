@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" >
+  <meta description="Ejercicio de prueba en Aula con Menu Flex">
+  <link rel="shortcut icon" href="./imagenes/faviconTest.png">
+  <title>El nostres productes de proximitat</title>
+  <style>
+
+  /* Ojo----hay que usar una clase. div no funciona*/
+  .expositores{display:flex;
+            width:1080px;
+            height: 725px; 
+            font-family: sans-serif;
+            justify-content: space-between;
+            align-items: stretch;
+            gap:2px ;}
+            
+    .tablaProductos {display:flex;}
+    .tablaProductos {border: 2px red solid;padding : 16px; flex-basis: 200px;}
+    .tablaProductos:nth-child(1) {flex:1; }  
+    .tablaProductos:nth-child(2) {flex:1; }  
+    .tablaProductos:nth-child(2) {flex:1; }
+
+    /*div
+          div {margin: 20px;}
+          #divFrutas  {float: left; }
+          #divVerduras  {float:left; width: 25%; }
+          #divPescados  {float: left; width: 25%; }
+          #frutas,#divVerduras,#divPescados {width:340px; height: 725px; }
+          }*/
+         
+
+    /*lista Menu*/
+          ul {list-style-type: none; text-align: left; text-decoration: none;}
+          a:hover {background-color: grey;}
+           
+    /* Tablas*/
+
+        table, td {border-collapse: collapse;}
+        .pares {background-color: #FFFFCC;}
+        tr:hover {background-color: grey;}
+
+        #frutas   { border: 2px solid green; background-color: rgb(216, 226, 197);}
+        #verduras { border: 2px solid green; background-color: rgb(216, 226, 197);}
+        #pescados { border: 2px solid blue; background-color: rgb(193, 243, 243);}
+
+  </style>
+</head>
+<body>
+<div class="menu">
+    <h1>“La botiga que t’ofereix productes de proximitat"</h1>
+    <ul>
+        <li><a href="#frutas"> Frutas </a></li>
+        <li><a href="#verduras"> Verduras</a></li>
+        <li><a href="#pescados"> Peix </a></li>
+    </ul>
+</div>
+<div class="expositores">
+<div id="divFrutas" classe="tablaProductos">
+    <table id="frutas">
+        <tr>
+            <td> 
+                <a href="./detalleFresas.html" target="_blank"> <img src="./imagenes/fresas.jpg" width="200px"></a>
+
+                </td>
+            <td> Fresas </td>
+            <td>  1.3€Kg </td>  
+            
+        </tr>
+        <tr class="pares">
+            <td> <img src="./imagenes/limones.jpg" width="200px"> </td>
+            <td> Limones </td>
+            <td> 1.5€Kg  </td>
+            
+        </tr>
+        <tr >
+            <td> <img src="./imagenes/manzanas.jpg" width="200px">  </td>
+            <td >Manzanas </td>
+            <td> 1.5€Kg  </td>
+                   
+        </tr>
+        <tr class="pares">
+            <td> <img src="./imagenes/higos.jpeg"width="200px"> </td>
+            <td > Higos </td>
+            <td> 3.5€Kg  </td>
+        </tr>
+      
+    </table>
+</div>
+<div id="divVerduras" classe="tablaProductos">
+    <table id="verduras">
+        <tr>
+            <td><img src="./imagenes/lechuga.jpg" width="200px"> </td>
+            <td> Lechuga </td>
+            <td>  1.3€Kg </td>  
+            
+        </tr>
+        <tr class="pares">
+            <td> <img src="./imagenes/calabacin.jpg" width="200px"> </td>
+            <td> Calabacin </td>
+            <td> 1.5€Kg  </td>
+            
+        </tr>
+        <tr>
+            <td><img src="./imagenes/cebolla.jpg" width="200px"> </td>
+            <td >Cebolla </td>
+            <td> 1.5€Kg  </td>
+                   
+        </tr>
+        <tr class="pares">
+            <td > <img src="./imagenes/zanahoria.jpg" width="200px"></td>
+            <td > Zanahoria </td>
+            <td> 3.5€Kg  </td>
+        </tr>
+      
+    </table>
+</div>
+<div id="divPescados" classe="tablaProductos">
+    <table id="pescados">
+        <tr>
+            <td>  <img src="./imagenes/jureles.jpg" width="200px"></td>
+            <td> Jureles </td>
+            <td>  1.3€Kg </td>  
+            
+        </tr>
+        <tr class="pares">
+            <td>  <img src="./imagenes/trucha.jpg" width="200px"> </td>
+            <td> Truchas </td>
+            <td> 1.5€Kg  </td>
+            
+        </tr>
+
+        <tr>
+        <!-- >    <td> <img src="./imagenes/rodaballo.jpg" width="200px"></td> <-->
+            <td> <img src="https://lapanaceabio.com/blog/wp-content/uploads/2021/02/ph_simpleblog_1.jpg" width="200px"></td>
+            <td >Rodaballos </td>
+            <td> 1.5€Kg  </td>
+                   
+        </tr>
+        <tr class="pares">
+       <!-- >      <td><img src="./imagenes/bacalao.jpg" width="200px"></td> <-->
+            <td><img src="https://jugosecologicosdemurcia.es/content/uploads/productos-ecologicos-jugosecologicos.jpg" width="200px"></td>
+            <td > Bacalao </td>
+            <td> 3.5€Kg  </td>
+        </tr>
+      
+    </table>
+  
+</div>
+</div>
+</body>
+</html>

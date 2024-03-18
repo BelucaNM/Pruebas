@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio numero 1 de uso del flexbox</title>
+  <style>
+
+  /* Ojo----hay que usar una clase. div no funciona*/
+  .card {display:flex; flex-direction: column;
+            background-color:rgb(236, 205, 205);
+            font-family: sans-serif;
+            width: 400px;
+            height: 300px;
+            box-shadow: 0px 0px 7px 0px lightgrey;
+            border: 0;
+                     } 
+   /* poner display Flex, y justify u align en cada contenedor */
+    .encabezado{display:flex; flex:1;background-color:black; color: white ;  
+            justify-content: center;
+            align-items: center;}
+    .cuerpo{flex:4;}
+    .pie{display:flex; flex:1;background-color:grey;  
+            justify-content: center;
+            align-items: center;}
+
+  </style>
+</head>
+<body>
+<div class="card">
+    <div class="encabezado">
+        <h2>Tarjeta de Presentación</h2>
+    </div>
+    <div class="cuerpo">
+        <p>Contenido del cuerpo de la tarjeta</p>
+    </div>
+    <div class="pie">
+        <h4>Pie de la tarjeta</h4>
+    </div>
+</div>
+</body>
+</html>

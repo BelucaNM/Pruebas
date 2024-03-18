@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Expositores</title>
+  <style>
+
+  /* Ojo----hay ue usar una clase. div no funciona*/
+  .expositores{display:flex; flex-direction: row;
+            border: 2px red solid; 
+            font-family: sans-serif;
+            gap:2px ;
+            padding:0px;
+        }
+  .tablaProductos {display:flex; flex-direction: column;
+            background-color:white;
+            font-family: sans-serif;
+            width: 200px;
+            border: 2px red solid;
+            gap: 2px;
+            justify-content: center;
+            align-items: center;
+            } 
+  .producto {display:flex; flex-direction: column;
+            background-color:rgb(236, 205, 205);
+            font-family: sans-serif;
+            width: 200px;
+            border: 0;
+            flex:1;
+                     } 
+   /* poner display Flex, y justify u align en cada contenedor */
+    .encabezado{display:flex; flex:1;background-color:black; color: white ; height: 30px;  
+            justify-content: center;
+            align-items: center;}
+    .cuerpo{flex:2; justify-content: center;
+            align-items: center;}
+    .pie{display:flex; flex:1;background-color:grey; height: 20px; 
+            justify-content: center;
+            align-items: center;}
+
+  </style>
+</head>
+<body>
+<div class ="expositores">
+<div class="tablaProductos">
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Fresas</h2>
+        </div>
+        <div class="cuerpo">
+            <a href="./detalleFresas.html" target="_blank"> <img src="./imagenes/fresas.jpg" width="200px"></a>
+        </div>
+        <div class="pie">
+            <h4>3,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Limones</h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/limones.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>1,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Manzanas </h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/manzanas.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>1,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Higos </h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/higos.jpeg" width="200px"> 
+        </div>
+        <div class="pie">
+            <h4>6,80€Kg</h4>
+        </div>
+    </div>
+</div>
+<div class="tablaProductos">
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Lechuga</h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/lechuga.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>3,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Calabacín</h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/calabacin.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>1,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Cebolla </h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/cebolla.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>1,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Zanahoria</h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/zanahoria.jpg" width="200px"> 
+        </div>
+        <div class="pie">
+            <h4>6,80€Kg</h4>
+        </div>
+    </div>
+</div>
+<div class="tablaProductos">
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Jureles</h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/jureles.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>3,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Truchas</h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/trucha.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>1,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Rodaballos </h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/rodaballo.jpg" width="200px">
+        </div>
+        <div class="pie">
+            <h4>1,80€Kg</h4>
+        </div>
+    </div>
+    <div class="producto">
+        <div class="encabezado">
+            <h2>Bacalao</h2>
+        </div>
+        <div class="cuerpo">
+            <img src="./imagenes/bacalao.jpg" width="200px"> 
+        </div>
+        <div class="pie">
+            <h4>6,80€Kg</h4>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
