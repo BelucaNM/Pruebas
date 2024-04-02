@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <meta description="Examen en Aula">
+    <link rel="shortcut icon" href="faviconTest.png">
+    <title>Pagina de administrador</title>
+  <style>
+
+  /* Ojo----hay que usar una clase. div no funciona*/
+  .todoFlex{display:flex;
+            width:500px;
+            height:300px; 
+            font-family: sans-serif;
+            justify-content: space-between;
+            align-items: stretch;
+            gap:2px ;
+          } 
+    .item {border: 2px red solid;padding-right: 12px; padding-top:24px; flex-basis: 200px;}
+    .item:nth-child(1) {background-color:rgb(146, 233, 246) ;flex: 1; }  
+    .item:nth-child(2) {background-color: rgba(193,219,210,1.00); flex:2; }  
+  
+.menu{ display:flex; flex-direction: column; gap: 2px;}
+ul{ list-style-type: none; text-decoration:none;}
+li {border-bottom: 2px red solid; margin-bottom: 10px; }
+
+  </style>
+</head>
+<body>
+  <div class="todoFlex">
+    <div class="item" id="lateral" >
+        <ul class="menu" >
+            <li> <a href=""> Usuaris</a></li>
+            <li> <a href=""> Productes</a></li>
+            <li> <a href=""> Post</a></li>
+        </ul>
+    </div>
+    <div class="item" id="principal">
+        <div id="usuario" class="campo">
+            <label for="fusuario">Usuario</label> <br>
+            <input type="text" id="fusuario" name="fusuario" required ><br>
+        </div>
+        <button id="buscador" type ="submit"  formtarget="" > Cerca </button>
+        <a href="afegir-usuari.html" target= "_blank" > Nou usuari  </a>
+        <button id="borrado" type ="submit"  formtarget="" > Borrar Tots  </button>
+        <div id="listadoUsuarios" >
+            <ul >
+                
+                <li> <input type="checkbox" > <img src="avatarIsabel.jpg" width="20px"> Isabel Navarrina</li>
+                <li> <input type="checkbox" > <img src="avatarToni.jpg" width="20px">Toni Oller</li>
+                <li> <input type="checkbox" > <img src="avatarPepe.jpg" width="20px">Pepe Perez</li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+  <div>
+</body>
+</html>
