@@ -29,13 +29,13 @@ for (let $i=0; $i< valores.length ;$i++){
         if ( !encontradoPrimero )   { elNumero1 = valores[$i]; encontradoPrimero = true; }
         else { elNumero2 = valores[$i];}
     }
-
-    console.log ( "la Suma de los numeros es =" + (elNumero1 + elNumero2))
-    console.log ( "la resta de los numeros es =" + (elNumero1 - elNumero2))
-    console.log ( "El producto de los numeros es =" + elNumero1 * elNumero2)
-
-
 console.log ( "el String mayor es "+ elMayor)
+console.log ( "la Suma de los numeros es =" + (elNumero1 + elNumero2))
+console.log ( "la resta de los numeros es =" + (elNumero1 - elNumero2))
+console.log ( "El producto de los numeros es =" + (elNumero1 * elNumero2))
+
+
+
 
 
 
@@ -43,16 +43,16 @@ console.log ( "el String mayor es "+ elMayor)
 var numero1 = 5;
 var numero2 = 8;
 if ( numero1 <= numero2 ) {
-alert("numero1 no es mayor que numero2");
+alert( numero1 + " no es mayor que " + numero2);
 }
 if( numero2 > 0) {
-alert("numero2 es positivo");
+alert( numero2 + " es positivo");
 }
 if (numero1<0 || numero1 != 0){
-alert("numero1 es negativo o distinto de cero");
+alert(numero1 + " es negativo o distinto de cero");
 }
 if(numero1++ < numero2) {
-alert("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+alert("Incrementar en 1 unidad el valor de "+ numero1 + " no lo hace mayor o igual que " + numero2);
 } 
 
 
