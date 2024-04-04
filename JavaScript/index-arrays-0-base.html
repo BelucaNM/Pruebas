@@ -126,10 +126,10 @@
                 let products = getProducts();
                 console.log(indice);
                 console.log(products[indice]);
-                let productsLimpio = products.splice(indice);
-
-                console.log(productsLimpio);
-                //escriureTaula(productsLimpio);
+                products.splice(indice,1);
+                
+                console.log(products);
+                escriureTaula(products);
 
             }
 /*
