@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <script>
+            function getProducts() {
+                let products = [
+                    {
+                        name: "peres", 
+                        category: "fruites",
+                        price: 1.5
+                    },
+                    {
+                        name: "Xai", 
+                        category: "carns",
+                        price: 1.56
+                    },
+                    {
+                        name: "pomes", 
+                        category: "fruites",
+                        price: 1.5
+                    },
+                    {
+                        name: "Pollastre", 
+                        category: "carns",
+                        price: 1.68
+                    },
+                    {
+                        name: "Tonyina", 
+                        category: "peixos",
+                        price: 5.68
+                    },
+
+                    {
+                        name: "Conill", 
+                        category: "carns",
+                        price: 1.68
+                    },
+                    {
+                        name: "Llobarro", 
+                        category: "peixos",
+                        price: 5.68
+                    },
+                    {
+                        name: "kiwi", 
+                        category: "fruites",
+                        price: 1.25
+                    },
+                    {
+                        name: "Porc", 
+                        category: "carns",
+                        price: 3.68
+                    }
+                ];
+                return products;
+            }
+
+            function ordenaPerNom() {
+                let products = getProducts();
+                products.sort( (p1, p2) => {
+                  p1name = p1.name.charAt(0).toUpperCase();
+                  p2name = p2.name.charAt(0).toUpperCase();
+                  if (p1name < p2name) return -1;
+                  if (p1name > p2name) return 1;
+                  return 0;
+                });
+                escriureTaula(products);
+            }
+
+            function ordenaPerCategoria() {
+                let products = getProducts();
+                products.sort( (p1, p2) => {
+                  if (p1.category < p2.category) return -1;
+                  if (p1.category > p2.category) return 1;
+                  return 0;
+                });
+                escriureTaula(products);
+            }
+
+            function ordenaPerPreu() {
+                let products = getProducts();
+                products.sort( (p1, p2) => {
+                  if (p1.price < p2.price) return -1;
+                  if (p1.price > p2.price) return 1;
+                  return 0;
+                });
+                escriureTaula(products);
+            }
+
+            function filtraPer(elFiltre) {
+                // TO-DO
+                // exemple
+                // result = words.filter((word) => word.length > 6);
+
+                console.log ("elfiltre es :" + elFiltre)
+                let productsPerFiltre = []
+                if (elFiltre == '') { productsPerFiltre = getProducts();}
+                else {
+                let products = getProducts();
+                productsPerFiltre = products.filter((product) => product.category == elFiltre);
+                }
+                escriureTaula(productsPerFiltre);
+                }
+
+            function escriureTaula(products) {
+                //console.log(products);
+                let theTable = "";
+                let product = null;
+                products.forEach((product) => {
+                    theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td></tr>";
+                });
+
+                document.getElementById("tauladeProductes").innerHTML=theTable;
+            }
+/*
+            function escriureTaula(products) {
+                console.log(products);
+                let theTable = "";
+                let product = null;
+                for (let i in products) {
+                    product = products[i];
+                    theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td></tr>";
+                }
+                document.getElementById("tauladeProductes").innerHTML=theTable;
+            }
+*/
+            document.addEventListener("DOMContentLoaded", function() {
+            let products = getProducts();
+            escriureTaula(products);
+
+            })
+        </script>
+    </head>
+    <body>
+        <a href="#" onclick="javascript:ordenaPerNom()">[Ordena Nom]</a>&nbsp;<a href="#"  onclick="javascript:ordenaPerCategoria()">[Ordena per Categoria]</a>&nbsp;<a href="#"  onclick="javascript:ordenaPerPreu()">[Ordena per preu]</a>
+        <p><a href="#"  onclick="javascript:filtraPer('')">[Tots]</a><a href="#"  onclick="javascript:filtraPer('peixos')">[Filtra per Peixos]</a>&nbsp;<a href="#"  onclick="javascript:filtraPer('carns')">[Filtra per carns]</a>&nbsp;<a href="#"  onclick="javascript:filtraPer('fruites')">[Filtra per fruites]</a>
+        <table id="tauladeProductes" border="1"></table>
+    </body>
+</html>
