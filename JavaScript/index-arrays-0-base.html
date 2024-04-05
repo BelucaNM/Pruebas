@@ -109,7 +109,7 @@
                 {   
                     indice = i;
                     product =  products[indice] ;              
-                    theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td><td><a href=\"#\" onclick=\"javascript:deleteProduct("+indice+")\"> [Borra] </a></td></tr>";
+                    theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td><td><a href=\"#\" onclick=\"javascript:deleteProduct("+indice+")\"> [Borra] </a></td><td><a href=\"#\" onclick=\"javascript:deleteProduct("+indice+")\"> [Borra] </a></td></tr>";
                 }
    
             /*
@@ -168,9 +168,9 @@
             for (  i=0; i<imagenes.length ;i++) {console.log (imagenes[i])};
 
             let x = document.getElementById("myform");
-            console.log ("El form : " , x);
-            x = document.getElementsByName("myform");
-            console.log ("El form : " + x[0]);
+            console.log ("El form by ID: " , x[0]);
+             x = document.getElementsByName("myform");
+            console.log ("El form By Name : " , x[0]);
 
             })
         </script>
