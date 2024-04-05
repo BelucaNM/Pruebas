@@ -148,12 +148,42 @@
             let products = getProducts();
             escriureTaula(products);
 
+            let url = document.URL;
+            console.log ("la URL es :"+ url);
+
+            let formularios = document.forms;
+            console.log ("Los formularios :"+ formularios);
+            console.log ( "Hay :", document.forms.length, " formularios.");
+             for ( let i=0; i<formularios.length ;i++) {console.log (formularios[i])};
+
+            let imagenes = document.images;
+            console.log ("las imagenes : " + imagenes);
+            console.log ( "Hay :" +imagenes.length+ " imagenes.");
+            for (  i=0; i<imagenes.length ;i++) {console.log (imagenes[i])};
+
+            let x = document.getElementsByTagName("myform");
+            console.log ("El form : " + x);
+            x = document.getElementsByName("myform");
+            console.log ("El form : " + x);
+
             })
         </script>
     </head>
+
     <body>
         <a href="#" onclick="javascript:ordenaPerNom()">[Ordena Nom]</a>&nbsp;<a href="#"  onclick="javascript:ordenaPerCategoria()">[Ordena per Categoria]</a>&nbsp;<a href="#"  onclick="javascript:ordenaPerPreu()">[Ordena per preu]</a>
         <p><a href="#"  onclick="javascript:filtraPer('')">[Tots]</a><a href="#"  onclick="javascript:filtraPer('peixos')">[Filtra per Peixos]</a>&nbsp;<a href="#"  onclick="javascript:filtraPer('carns')">[Filtra per carns]</a>&nbsp;<a href="#"  onclick="javascript:filtraPer('fruites')">[Filtra per fruites]</a>
         <table id="tauladeProductes" border="1"></table>
+        <img src="astronautaPeq.jpg">
+        <form id="myform" name="myform">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br><br>
+            <input type="submit" value="Submit">
+          </form>
+    
+
     </body>
+
 </html>
