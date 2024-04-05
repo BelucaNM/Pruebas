@@ -154,17 +154,23 @@
             let formularios = document.forms;
             console.log ("Los formularios :"+ formularios);
             console.log ( "Hay :", document.forms.length, " formularios.");
-             for ( let i=0; i<formularios.length ;i++) {console.log (formularios[i])};
+             for ( let i=0; i<formularios.length ;i++) {
+                let elForm = formularios[i];
+                let susElementos = elForm.elements;
+                for (let j=0; j<susElementos.length; j++) {
+                    console.log(susElementos[j].name);
+                }
+             };
 
             let imagenes = document.images;
             console.log ("las imagenes : " + imagenes);
             console.log ( "Hay :" +imagenes.length+ " imagenes.");
             for (  i=0; i<imagenes.length ;i++) {console.log (imagenes[i])};
 
-            let x = document.getElementsByTagName("myform");
-            console.log ("El form : " + x);
+            let x = document.getElementById("myform");
+            console.log ("El form : " , x);
             x = document.getElementsByName("myform");
-            console.log ("El form : " + x);
+            console.log ("El form : " + x[0]);
 
             })
         </script>
@@ -177,9 +183,11 @@
         <img src="astronautaPeq.jpg">
         <form id="myform" name="myform">
             <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" value=""><br>
+            <input type="text" id="fname" name="fnombre" value=""><br>
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
+            <input type="text" id="lname" name="apellidos" value=""><br><br>
+            <label for="psw">Password:</label><br>
+            <input type="text" id="psw" name="clavepaso" value=""><br><br>
             <input type="submit" value="Submit">
           </form>
     
