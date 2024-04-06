@@ -1,12 +1,7 @@
 <html>
     <head>
         <script>
-<<<<<<< HEAD
             window.products = [
-=======
-            function getProducts() {
-                let products = [
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
                     {
                         name: "peres", 
                         category: "fruites",
@@ -54,20 +49,13 @@
                         price: 3.68
                     }
                 ];
-<<<<<<< HEAD
             function getProducts() {
-=======
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
                 return products;
             }
 
             function ordenaPerNom() {
-<<<<<<< HEAD
             //    let products = getProducts();
                 
-=======
-                let products = getProducts();
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
                 products.sort( (p1, p2) => {
                   p1name = p1.name.charAt(0).toUpperCase();
                   p2name = p2.name.charAt(0).toUpperCase();
@@ -79,11 +67,7 @@
             }
 
             function ordenaPerCategoria() {
-<<<<<<< HEAD
             //    let products = getProducts();
-=======
-                let products = getProducts();
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
                 products.sort( (p1, p2) => {
                   if (p1.category < p2.category) return -1;
                   if (p1.category > p2.category) return 1;
@@ -93,11 +77,7 @@
             }
 
             function ordenaPerPreu() {
-<<<<<<< HEAD
             //    let products = getProducts();
-=======
-                let products = getProducts();
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
                 products.sort( (p1, p2) => {
                   if (p1.price < p2.price) return -1;
                   if (p1.price > p2.price) return 1;
@@ -125,30 +105,14 @@
                 console.log(products);
                 let theTable = "";
                 let product = null;
-<<<<<<< HEAD
                 
                 products.forEach((product) => {
                  theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td><td onclick=\"editarFila(this)\"> [Modifica]</td><td><a href=\"#\" onclick=\"javascript:deleteProduct('"+product.name+"')\"> [Borra] </a></td></tr>";
                 }); 
-=======
-                let i=-1;
-                while(++i<products.length)
-                {   
-                    indice = i;
-                    product =  products[indice] ;              
-                    theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td><td><a href=\"#\" onclick=\"javascript:deleteProduct("+indice+")\"> [Borra] </a></td><td><a href=\"#\" onclick=\"javascript:deleteProduct("+indice+")\"> [Borra] </a></td></tr>";
-                }
-   
-            /*
-                products.forEach((product) => {
-                 theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td><td><a href=\"#\" onclick=\"javascript:deleteProduct("+product+")\"> [Borra] </a></td></tr>";
-                }); */
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
 
                 document.getElementById("tauladeProductes").innerHTML=theTable;
                 }
             
-<<<<<<< HEAD
             function deleteProduct(nombre) {
             //    let products = getProducts();
                 console.log(nombre);
@@ -228,32 +192,6 @@ function cambiarEnEdicion(nodo){
 }
 
 // event para garantizar que la página está cargada antes de comprobaciones en el DOCUMENT
-=======
-            function deleteProduct(indice) {
-                
-                
-                let products = getProducts();
-                console.log(indice);
-                console.log(products[indice]);
-                products.splice(indice,1);
-                
-                console.log(products);
-                escriureTaula(products);
-
-            }
-/*
-            function escriureTaula(products) {
-                console.log(products);
-                let theTable = "";
-                let product = null;
-                for (let i in products) {
-                    product = products[i];
-                    theTable+="<tr><td>"+product.name+"</td><td>"+product.category+"</td><td>"+product.price+"</td></tr>";
-                }
-                document.getElementById("tauladeProductes").innerHTML=theTable;
-            }
-*/
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
             document.addEventListener("DOMContentLoaded", function() {
             let products = getProducts();
             escriureTaula(products);
@@ -290,12 +228,9 @@ function cambiarEnEdicion(nodo){
         <a href="#" onclick="javascript:ordenaPerNom()">[Ordena Nom]</a>&nbsp;<a href="#"  onclick="javascript:ordenaPerCategoria()">[Ordena per Categoria]</a>&nbsp;<a href="#"  onclick="javascript:ordenaPerPreu()">[Ordena per preu]</a>
         <p><a href="#"  onclick="javascript:filtraPer('')">[Tots]</a><a href="#"  onclick="javascript:filtraPer('peixos')">[Filtra per Peixos]</a>&nbsp;<a href="#"  onclick="javascript:filtraPer('carns')">[Filtra per carns]</a>&nbsp;<a href="#"  onclick="javascript:filtraPer('fruites')">[Filtra per fruites]</a>
         <table id="tauladeProductes" border="1"></table>
-<<<<<<< HEAD
         <div id="botonesForm"></div>
 
         <!-- > Insertar una IMG y FORM Para Probar DOM <-->
-=======
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
         <img src="astronautaPeq.jpg">
         <form id="myform" name="myform">
             <label for="fname">First name:</label><br>
@@ -305,11 +240,7 @@ function cambiarEnEdicion(nodo){
             <label for="psw">Password:</label><br>
             <input type="text" id="psw" name="clavepaso" value=""><br><br>
             <input type="submit" value="Submit">
-<<<<<<< HEAD
         </form>
-=======
-          </form>
->>>>>>> 363b59f743684c2b4609fec149642f8d9e5033d2
     
 
     </body>
