@@ -9,30 +9,36 @@
 	
   	<style>
 	:root{
-		--color1: #425067;
+		--color1: #e1f0ed;
+        --color2: grey;
+        --color3: #25d6c8;
+        --color4: #eeeeee;
+		--color5: white;
 
-
-
-
-	}
+    }
 
 
 	* { box-sizing: border-box;
 		font-family:Arial, Helvetica, sans-serif;
-		background-color : var(--color1);}
+		
+	}
+
 
 	.contenedorPrincipal{
+        display : grid;
+        grid-template-columns: auto auto auto;
 		padding-left: 1em;
 		padding-right: 1em;
-		background-color: grey;
+		background-color: var(--color2);
 		height:auto;
 		max-width: 1000px;
+        align-content: center;
 	
 	}
 	header {
-		width: 100%;
-		height:48px;
-		background-color: #eeeeee;
+        grid-column: 1/4;
+		height:72px;
+		background-color: var(--color1);;
 	}
 	
 	header li{
@@ -57,10 +63,8 @@
 
 
 	main {
+        grid-column: 1/3;
 		background-color: white;
-		float: left;
-		width: 70%;		
-
 	}
 
 	img {
@@ -75,8 +79,8 @@
 
 	section p {
 		text-align: justify;
-	margin-bottom: 16px;
-	inline-size: 1.5 em;
+		margin-bottom: 16px;
+		inline-size: 1.5 em;
 	}
 
 	h1 {
@@ -85,10 +89,12 @@
 	}
 	
 	aside{
-		width: 30%;
-		float:left;
-		background-color:#25d6c8;
+        grid-column: 3,4;
+	    background-color:#25d6c8;
 		padding:30px
+	}
+	aside ul{
+		padding-left: 0;
 	}
 	aside li{
 		list-style: none;
@@ -102,8 +108,9 @@
 	}
 	footer {
 		clear: both;
-		width:70%;
-		background-color: #e52f6e;
+		grid-column: 1/4;
+		height:48px;
+		background-color:var(--color1);
 		padding: 60px;
 
 	}
